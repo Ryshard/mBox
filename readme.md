@@ -48,10 +48,10 @@ First you add a metabox itself:
 	$page_set->add_metabox( $args );
 
 	$args = array(
-			'id' => 'headline' ,
-			'title' => 'Headline',
+			'id' 	   => 'headline' ,
+			'title'    => 'Headline',
 			'priority' => 'high', 
-			'context' => 'side'
+			'context'  => 'side'
 			);
 
 'id'       - unique id of the metabox - mandatory
