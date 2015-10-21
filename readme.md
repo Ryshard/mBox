@@ -301,7 +301,7 @@ Inserts hidden field into the metabox
 Select Box - list of all available pages and posts
 Saves ID in Database.
 
-$args = array(
+    $args = array(
 		'type'  => 'content_select',
 		'name'  => 'unique_name'
 		'label' => '',
