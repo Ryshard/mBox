@@ -1,6 +1,8 @@
-**********************************
-Mbox Class - Instructions
+Mbox Class (Wordpress)
 =============================================
+
+A helper class to make adding custom metaboxes easier
+
 
 
 Installation
