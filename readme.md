@@ -70,10 +70,10 @@ Once added metabox, you can add fields to it.
 	$page_set->add_field( $metabox_id, $args);
 
 	$args = array(
-				'type'  => 'text',
-				'name'  => 'heading'
-				'label' => '',
-				));
+		'type'  => 'text',
+		'name'  => 'heading'
+		'label' => '',
+		));
 
 $metabox_id - unique id of the metabox you wish to add this field to. 
 'type' - field type (available types below)
@@ -141,12 +141,12 @@ Standard text field with validation type of 'date'
 Standard text field with validation type of 'number'
 
  	$args = array(
-		'type'  => 'number',
-		'name'  => 'unique_name'
-		'label' => '',
-		'min' => 1,
-		'max' => 60,
-		'step' => 1,
+		'type'    => 'number',
+		'name'    => 'unique_name'
+		'label'   => '',
+		'min' 	  => 1,
+		'max' 	  => 60,
+		'step'    => 1,
 		'default' => 1
 		));
 
@@ -160,8 +160,8 @@ Generates Wordpress Rich text editor (TinyMCE)
 		'type'  => 'rich',
 		'name'  => 'unique_name'
 		'label' => '',
-		'rows' => 8,
-		'html' => 60,
+		'rows'  => 8,
+		'html'  => 60,
 		'media' => 1
 		));
 
@@ -179,7 +179,7 @@ Standard Textarea field with specified number of rows
 		'type'  => 'textarea',
 		'name'  => 'unique_name'
 		'label' => '',
-		'rows' => 8
+		'rows'  => 8
 		));
 
 ----------------------------
@@ -194,8 +194,8 @@ Seves media ID in DB.
 		'type'  => 'image',
 		'name'  => 'unique_name'
 		'label' => '',
-		'mime' => 'jpg'
-		'show' => true
+		'mime'  => 'jpg'
+		'show'  => true
 		));
 
 'mime' - optional - by default this fields let you choose from all the available media.
@@ -243,8 +243,8 @@ Displays static information text
  	$args = array(
 		'type'  => 'cta_btn',
 		'name'  => 'unique_name',
-		'info' => 'This is sample descriptive Text',
-		'hr' => true
+		'info'  => 'This is sample descriptive Text',
+		'hr'    => true
 		));
 
 'info' - text to display
@@ -274,8 +274,8 @@ Inserts custom script into html
     <script>{your-script}</script>
 
  	$args = array(
-		'type'  => 'script',
-		'name'  => 'unique_name'
+		'type'   => 'script',
+		'name'   => 'unique_name'
 		'script' => '$("#button").click(function(){ .....',
 
 		));
@@ -340,7 +340,6 @@ Displays fields necessary for displaying google static map
 - text field 'longitiude'
 - text field 'latitude' 
 - number field 'zoom'
-
 - google maps static image based on above
 
         $args = array(
