@@ -172,7 +172,8 @@ Generates Wordpress Rich text editor (TinyMCE)
  * textarea
 
 Standard Textarea field with specified number of rows
-$args = array(
+
+    $args = array(
 		'type'  => 'textarea',
 		'name'  => 'unique_name'
 		'label' => '',
@@ -187,7 +188,7 @@ $args = array(
 Select Box - Select media
 Seves media ID in DB.
 
-$args = array(
+    $args = array(
 		'type'  => 'image',
 		'name'  => 'unique_name'
 		'label' => '',
@@ -202,7 +203,7 @@ $args = array(
 		array('jpg','svg')
 
 'show' - true or false (default true)
-		Either display selected image or not.
+Either display selected image or not.
 
 ----------------------------
 
@@ -244,8 +245,8 @@ Displays static information text
 		'hr' => true
 		));
 
-		'info' - text to display
-		'hr'  - true / false  - either to dirplay <hr> aftrt info text (default: true)
+'info' - text to display
+'hr'  - true / false  - either to dirplay <hr> aftrt info text (default: true)
 
 ----------------------------
 
@@ -268,7 +269,7 @@ Saves form ID in the DB
 
 Inserts custom script into html
 
-<script>{your-script}</script>
+    <script>{your-script}</script>
 
  	$args = array(
 		'type'  => 'script',
@@ -283,7 +284,7 @@ Inserts custom script into html
 
 Inserts hidden field into the metabox
 
-$args = array(
+    $args = array(
 		'type'  => 'hidden',
 		'name'  => 'unique_name'
 		'value' => 'special-value',
@@ -307,11 +308,11 @@ $args = array(
 
 'post_type' - by default displays all pages and posts
 
-			can be limited to specyfic types:
-			'all'(default) | 'page' | 'post' | 'custom-post-type'
+can be limited to specyfic types:
+    'all'(default) | 'page' | 'post' | 'custom-post-type'
 
-			can be an array of posts
-			array('page', 'custom-post-type')
+can be an array of posts
+	array('page', 'custom-post-type')
 
 ----------------------------
 
@@ -340,11 +341,11 @@ Displays fields necessary for displaying google static map
 
 - google maps static image based on above
 
-$args = array(
-		'type'  => 'map',
-		'name'  => 'unique_name'
-		'label' => '',
-		));
+        $args = array(
+            'type'  => 'map',
+            'name'  => 'unique_name'
+            'label' => '',
+            ));
 
 ----------------------------
 
