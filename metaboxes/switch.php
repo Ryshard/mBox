@@ -86,106 +86,24 @@ $page_set->add_field('post_type', array(
 ));
 */
 
-$simple_cpts = array(
-		'attachment',
-		'team',
-		'faq',
-		'philosophy',
-		'product',
-		'course',
-		'wc_booking',
-		'lesson',
-		'post',
-		'shop_order',
-		'bookable_resource'
-	);
-
-if( !in_array( $post_type, $simple_cpts ) )
-{
-	$page_set->add_metabox( array(
-						'id'       => 'headline' ,
-						'title'    => 'Headline',
-						'priority' => 'high'
-						));
-
-	$page_set->add_field('headline', 
-							array( 
-								'type' => 'text',
-								'name' => 'title',
-								'label' => 'Title'
-								));
-
-	$page_set->add_field('headline', 
-							array( 
-								'type' => 'text',
-								'name' => 'subtitle',
-								'label' => 'Sub Title'
-								));
-
-
-	$page_set->add_metabox( array(
-						'id' => 'leadin' ,
-						'title' =>  'Lead in',
-						'priority' => 'low',
-						'context' => 'side'
-					));
-
-	$page_set->add_field('leadin', array(
-						'type'  => 'text',
-						'label' => 'Title',
-						'name'  => 'title'
-					));
-
-
-
-	$page_set->add_field( 'leadin', array(
-						'type'  => 'image',
-						'label' => '',
-						'name'  => 'image'
-					));
-
-
-	$page_set->add_metabox( array(
-							'id'       => 'testimonials' ,
-							'title'    => 'Testimonials (Bottom)',
-							'priority' => 'low',
-							'context'  => 'side'
-							));
-
-				for ($i=1; $i < 6; $i++) 
-				{ 
-					$page_set->add_field('testimonials', 
-						array( 
-							'type'  => 'content_select',
-							'name' => 'testimony_' . $i,
-							'label'=> 'Testimony ' . $i,
-							'post_type' => 'testimony'
-						));
-				}
-
-
-}
-
-
-
 
 //----------------------------------------------
 //  				POSTS
 //----------------------------------------------
-if($post_type === 'wc_booking')
+if($post_type === 'cpt')
 {
 	$page_set->add_metabox( array(
-		'id'       => 'customer_info' ,
-		'title'    => 'Additional Customer Information',
-		'priority' => 'low',
-		'context' => 'side'
-));
+			'id'       => 'customer_info' ,
+			'title'    => 'Additional Customer Information',
+			'priority' => 'low',
+			'context' => 'side'
+	));
 
-$page_set->add_field('customer_info', array(
-		'type' => 'custom',
-		'name' => 'pti',
-		'function' => 'booking_customer_info_box'
-));
+	$page_set->add_field('customer_info', array(
+			'type' => 'custom',
+			'name' => 'pti',
+			'function' => 'booking_customer_info_box'
+	));
 }
 
 
@@ -216,15 +134,7 @@ elseif($post_type === 'page')
 	  	{
 	  		include_once BOXES . 'home-meta.php';
 	  	}
-	  	elseif( $template_file == 'templates/course-type.php' )
-	  	{
-	  		include_once BOXES . 'courses-type-meta.php';
-	  	}
-		elseif( $template_file == 'templates/our-courses.php' )
-	  	{
-	  		include_once BOXES . 'our-courses-meta.php';
-	  	}
-	  	elseif( $template_file == 'template-fullwidth.php' )
+	   	elseif( $template_file == 'template-fullwidth.php' )
 	  	{	
 	  			$page_set->add_metabox( array(
 						'id'       => 'content_section' ,

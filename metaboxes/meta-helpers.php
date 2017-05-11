@@ -424,7 +424,7 @@ function image_box(&$page_set, $box_id, $field_id, $container, $c = '')
     'type'  => 'content_select',
     'name'  => $field_id . '_link',
     'label' => 'Select Link ' . $c,
-    'post_type' => array('page', 'post', 'acet_courses'),
+    'post_type' => array('page', 'post'),
      'container' => $container
 
   ));

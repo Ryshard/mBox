@@ -16,7 +16,7 @@ $box_id = 'our_team';
 
 $page_set->add_metabox( array(
       'id' => $box_id ,
-      'title' => 'ACET Team'
+      'title' => 'Our Team'
       ));
 
 $page_set->add_field($box_id, array(
